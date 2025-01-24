@@ -65,6 +65,20 @@
         padding-left: 40px;
         list-style-type: none; /* Remove dots */
       }
+
+      .image-container {
+        display: flex;
+        justify-content: center; /* Center the images */
+        gap: 20px; /* Space between the images */
+        margin-top: 20px;
+      }
+
+      .image-container img {
+        width: 300px; /* Adjust the width of the images */
+        height: auto;
+        border: 2px solid #ccc; /* Optional: Add a border around the images */
+        border-radius: 5px; /* Optional: Add rounded corners */
+      }
     </style>
   </head>
   <body>
@@ -184,9 +198,20 @@
                 <strong>Neun</strong>
               </td>
             </tr>
+            <tr>
+              <td style="border: 1px solid #ddd; padding: 6px">10</td>
+              <td style="border: 1px solid #ddd; padding: 6px">
+                <strong>Zehn</strong>
+              </td>
+            </tr>
           </tbody>
         </table>
       </ul>
+      <!-- Two Images Side by Side -->
+      <div class="image-container">
+        <img src="../media/German-numbers-11-20.png" alt="Numbers 11 to 20" />
+        <img src="../media/german-number-20-90.png" alt="Numbers 20 to 90" />
+      </div>
     </main>
   </body>
 </html>
