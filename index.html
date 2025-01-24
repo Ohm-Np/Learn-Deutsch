@@ -4,71 +4,157 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>German Learning Notes</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        margin: 20px;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: flex-start; /* Align at the top */
+        flex-direction: column;
+        background-color: #f4f4f4;
+        padding-top: 60px; /* Space for the fixed header */
       }
-      .vocab-section,
-      .verb-section {
-        margin-bottom: 20px;
-      }
-      h2 {
-        color: #007bff;
-      }
-      table {
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        border-collapse: collapse;
-      }
-      table,
-      th,
-      td {
-        border: 1px solid #ddd;
-      }
-      th,
-      td {
         padding: 10px;
-        text-align: left;
+        background-color: #007bff;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      .header-content {
+        display: flex;
+        flex-direction: column; /* Stack the flag, title, and author */
+        align-items: center;
+        gap: 5px;
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; /* Adjust this to shift the GitHub link to the left */
+      }
+
+      .header-right img {
+        margin-right: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .toc {
+        background-color: #ffff00;
+        border-radius: 5px;
+        padding: 40px;
+        text-align: center;
+        width: 90%; /* Set width to 90% to make it wider */
+        max-width: 1200px; /* Optional: limit max-width if necessary */
+        margin-top: 100px; /* Ensures it's below the fixed header */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+        margin-left: auto; /* Centers the box */
+        margin-right: auto; /* Centers the box */
+      }
+
+      .toc h2 {
+        margin-top: 0;
+        font-size: 32px;
+        color: rgb(4, 20, 168);
+      }
+
+      .toc ol {
+        padding-left: 0;
+        list-style-type: none;
+      }
+
+      .toc li {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .toc a {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .toc a:hover {
+        text-decoration: underline;
+      }
+
+      .author {
+        font-size: 16px;
+        color: white;
+        font-style: italic;
+        margin-top: 5px;
       }
     </style>
   </head>
   <body>
-    <script src="script.js"></script>
+    <!-- Header -->
     <header>
-      <h1>German Learning Notes</h1>
+      <!-- Left Side: Title, Flag and Author -->
+      <div class="header-content">
+        <div style="display: flex; align-items: center">
+          <img
+            src="media/germany_flag.png"
+            alt="German Flag"
+            style="
+              width: 50px;
+              height: auto;
+              border: 2px solid white;
+              border-radius: 5px;
+            "
+          />
+          <h1 style="margin: 0">German Learning Notes</h1>
+        </div>
+        <div class="author">Authored by: Om Prakash Bhandari</div>
+      </div>
+
+      <!-- Right Side: GitHub Link -->
+      <div class="header-right">
+        <a href="https://github.com/Ohm-Np/Learn-Deutsch" target="_blank">
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="GitHub Logo for repository"
+            style="width: 30px; height: 30px"
+          />
+          GitHub
+        </a>
+      </div>
     </header>
-    <main>
-      <section class="vocab-section">
-        <h2>Vocabulary</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>German</th>
-              <th>English</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Apfel</td>
-              <td>Apple</td>
-            </tr>
-            <tr>
-              <td>Hund</td>
-              <td>Dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section class="verb-section">
-        <h2>Verbs</h2>
-        <p><strong>sein</strong> (to be):</p>
-        <ul>
-          <li>ich bin – I am</li>
-          <li>du bist – you are</li>
-          <li>er/sie/es ist – he/she/it is</li>
-        </ul>
-      </section>
-    </main>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="chapters/chapter_1.html">Alphabets and Numbers</a></li>
+        <li><a href="chapters/chapter_2.html">Articles</a></li>
+        <li><a href="chapters/chapter_3.html">Conjugation</a></li>
+        <li><a href="chapters/chapter_4.html">Sentence Structure</a></li>
+        <li><a href="chapters/chapter_5.html">Verbs</a></li>
+        <li><a href="chapters/chapter_6.html">Present Tense</a></li>
+        <li><a href="chapters/chapter_7.html">Perfect Tense</a></li>
+        <li><a href="chapters/chapter_8.html">Past Tense</a></li>
+      </ol>
+    </nav>
   </body>
 </html>
